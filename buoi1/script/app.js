@@ -2,18 +2,18 @@
 const firstName = "Cuong";
 const age = 18;
 let isStudent = false;
-let primarySchool = "undefined";
+let primarySchool = undefined;
 let className = null;
 
 //2. Tạo ra random số từ 100 - 1000
 const min = 100;
 const max = 1000;
-const randomFromToNumber = Math.trunc(Math.random() * (max - min + 1) + min);
+const randomFromToNumber = Math.floor(Math.random() * (max - min + 1) + min);
 console.log(randomFromToNumber);
 
 //3. Cho 1 số là 1.234567 dùng các kiến thức đã học để làm tròn thành 1.2345
 const number = 1.234567;
-const resultNumber = Math.trunc(number * 10000) / 10000;
+const resultNumber = Math.floor(number * 10000) / 10000;
 console.log(resultNumber);
 
 //4. Viết 1 đoạn code ví dụ có Hoisting
