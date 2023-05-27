@@ -51,7 +51,7 @@ console.log(newStr[0].toUpperCase() + newStr.slice(1));
  */
 
 /////////////////////////////// IF/ELSE ///////////////////////////////
-const avg = 10;
+const avg = 8;
 
 if (avg <= 10 && avg >= 0) {
     if (avg > 5) {
@@ -61,6 +61,8 @@ if (avg <= 10 && avg >= 0) {
     } else {
         console.log("Điểm của bạn dưới trung bình");
     }
+} else {
+    console.log("Điểm của bạn phải từ 0 đến 10, xin mời nhập đúng số điểm");
 }
 
 /////////////////////////////// SWITCH/CASE ///////////////////////////////
