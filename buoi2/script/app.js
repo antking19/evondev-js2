@@ -72,10 +72,6 @@ switch (day) {
         console.log("Hôm nay là thứ 2");
         break;
 
-    case "thu2":
-        console.log("Hôm nay là thứ 2");
-        break;
-
     case "thu3":
         console.log("Hôm nay là thứ 3");
         break;
@@ -92,13 +88,14 @@ switch (day) {
         console.log("Hôm nay là thứ 6");
         break;
 
-    case "thu2":
-        console.log("Hôm nay là thứ 2");
+    case "thu7":
+        console.log("Hôm nay là thứ 7");
         break;
 
     case "chunhat":
         console.log("Hôm nay là chủ nhật");
         break;
+
     default:
         console.log("Không xác định");
         break;
