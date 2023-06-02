@@ -1,26 +1,39 @@
 // 1. Write function to check if number is even, fn(2) -> true, fn(3) -> false
+// cách 1:
 function checkNumberIsEven(number) {
-    if (typeof number === "number") {
-        if (number % 2 === 0) return true;
-        else return false;
+    if (typeof number === "number" && number % 2 === 0) {
+        return true;
     }
+    return false;
 }
 console.log(checkNumberIsEven(2));
+
+// cách 2:
+function isEven(number) {
+    return typeof number === "number" && number % 2 === 0 ? true : false;
+}
 
 // 2. Write function to convert string to prefix string, example: fn('i love to learn','\_') -> 'i_love_to_learn'
 function convertStringToPrefix(str, character) {
     if (typeof str === "string") {
-        return str.toLowerCase().split(" ").join("_");
+        return str.toLowerCase().split(" ").join(character);
     }
+    return false;
 }
-console.log(convertStringToPrefix("i love to learn", "_"));
+console.log(convertStringToPrefix(1, "_"));
 
 // 3. Write function to calculate age, example: fn(1994) -> 29
 function calculateAge(birthYear) {
-    if (typeof birthYear === "number") {
-        const nowYear = new Date();
-        return nowYear.getFullYear() - birthYear;
+    const year = new Date();
+    const nowYear = year.getFullYear();
+    if (
+        typeof birthYear === "number" &&
+        birthYear > 0 &&
+        birthYear <= nowYear
+    ) {
+        return nowYear - birthYear;
     }
+    return "Năm sinh không hợp lệ";
 }
 console.log(calculateAge(1994));
 
@@ -57,14 +70,14 @@ console.log(randomNumberMinToMax(10, 100));
 
 // 7. Write function return typeof value, fn('evondev') -> string
 function checkTypeofValue(value) {
-    return `typeof ${value} is ${typeof value}`;
+    return typeof value;
 }
 
 console.log(checkTypeofValue("evondev"));
 
 // 8. Write function to check if str includes word, fn("evondev", "vonz") -> false
 function isIncludesWord(str, strCheck) {
-    if (typeof str !== "string" || typeof strCheck !== "string") return;
+    if (typeof str !== "string" || typeof strCheck !== "string") return false;
 
     return str.includes(strCheck);
 }
