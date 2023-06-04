@@ -1,7 +1,7 @@
 // ## Basic
 
 // 1. Write a function that creates a new array with given values fn(3, 'a') -> ['a','a','a']
-function givenValue(n, str) {
+function repeatStrArr(n, str) {
     if (typeof n !== "number" || n < 0 || typeof str !== "string") return [];
     const newArray = [];
     for (let i = 0; i < n; i++) {
@@ -9,12 +9,12 @@ function givenValue(n, str) {
     }
     return newArray;
 }
-console.log(givenValue(3, "a"));
+console.log(repeatStrArr(3, "a"));
 
 // 2. Write a function that reverts input array: input: [1,2,3] -> results: [3,2,1]
 const reverseArray = (arrayList) => {
     if (!Array.isArray(arrayList) || arrayList.length === 0) return [];
-    return arrayList.sort((a, b) => b - a);
+    return arrayList.reverse();
 };
 
 console.log(reverseArray([1, 10, 20, 100, 1000, 400]));
@@ -34,7 +34,7 @@ const withoutListValues = (arrayList, num) => {
         arrayList.length <= 0 ||
         typeof num !== "number"
     )
-        return undefined;
+        return [];
 
     return arrayList.filter((item) => item !== num);
 };
@@ -117,16 +117,19 @@ console.log(duplicateValueInArray([4, 2, 34, 4, 1, 12, 1, 4]));
 const duplicateValueInArray2 = (arrayList) => {
     if (!Array.isArray(arrayList) || arrayList.length === 0) return [];
 
-    const arrayList2 = [...arrayList.sort()];
     const newArray = [];
 
-    for (let i = 0; i < arrayList2.length; i++) {
-        if (arrayList2[i] === arrayList2[i + 1]) {
-            newArray.push(arrayList2[i]);
+    for (let i = 0; i < arrayList.length; i++) {
+        for (let j = i + 1; j < arrayList.length; j++) {
+            if (
+                arrayList[i] === arrayList[j] &&
+                !newArray.includes(arrayList[i])
+            )
+                newArray.push(arrayList[i]);
         }
     }
 
-    return [...new Set(newArray)].reverse();
+    return newArray;
 };
 
 console.log(duplicateValueInArray2([4, 2, 34, 4, 1, 12, 1, 4]));
