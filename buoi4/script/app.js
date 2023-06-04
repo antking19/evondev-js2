@@ -93,7 +93,15 @@ console.log(largestNumber([2, 45, 3, 67, 34, 567, 34, 345, 123]));
 
 const largestNumber2 = (numberList) => {
     if (!Array.isArray(numberList) || numberList.length <= 0) return 0;
+
+    let max = 0;
+    for (let i = 0; i < numberList.length; i++) {
+        if (numberList[i] >= max) max = numberList[i];
+    }
+    return max;
 };
+
+console.log(largestNumber2([2, 45, 3, 67, 34, 567, 34, 345, 123]));
 
 // 9. Write a function to find duplicate values in a given array: input [4,2,34,4,1,12,1,4] -> results: [4, 1]. Bài này tìm hiểu phương thức lastIndexOf của mảng nhé
 
