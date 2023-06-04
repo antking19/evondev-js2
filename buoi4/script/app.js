@@ -13,7 +13,7 @@ console.log(givenValue(3, "a"));
 
 // 2. Write a function that reverts input array: input: [1,2,3] -> results: [3,2,1]
 const reverseArray = (arrayList) => {
-    if (!Array.isArray(arrayList) || arrayList.length <= 0) return [];
+    if (!Array.isArray(arrayList) || arrayList.length === 0) return [];
     return arrayList.sort((a, b) => b - a);
 };
 
@@ -21,7 +21,7 @@ console.log(reverseArray([1, 10, 20, 100, 1000, 400]));
 
 // 3. Write a function that remove unnecessary elements, like false, undefined, empty strings, zero, null. input: [0, 1, false, 2, undefined, '', 3, null] => results: [1, 2, 3]
 const filterTruthyValue = (arrayList) => {
-    if (!Array.isArray(arrayList) || arrayList.length <= 0) return undefined;
+    if (!Array.isArray(arrayList) || arrayList.length === 0) return [];
 
     return arrayList.filter((item) => Boolean(item) === true);
 };
@@ -42,7 +42,7 @@ console.log(withoutListValues([1, 2, 3, 1, 5, 7, 1], 1));
 
 // 5. Write a function that returns a duplicate-free array. input: [1, 2, 3, 1, 2] => results: [1, 2, 3]
 const removeDuplicateValueInArray = (arrayList) => {
-    if (!Array.isArray(arrayList) || arrayList.length <= 0) return [];
+    if (!Array.isArray(arrayList) || arrayList.length === 0) return [];
     return arrayList.filter((item, index, arr) => arr.indexOf(item) === index);
 };
 console.log(removeDuplicateValueInArray([1, 2, 3, 1, 2]));
@@ -70,7 +70,7 @@ console.log(chunk([1, 2, 3, 4, 5], 2));
 
 // 7. Write a function to print Even numbers in given array: input [13,23,12,45,22,48,66,100] -> [12,22,48,66,100]
 const isEvenNumbers = (numberList) => {
-    if (!Array.isArray(numberList) || numberList.length <= 0) return [];
+    if (!Array.isArray(numberList) || numberList.length === 0) return [];
 
     const newNumberList = [];
 
@@ -84,7 +84,7 @@ console.log(isEvenNumbers([13, 23, 12, 45, 22, 48, 66, 100]));
 
 // 8. Write a function to find the largest number in an array: input [2, 45, 3, 67, 34, 567, 34, 345, 123] -> result: 567
 function largestNumber(numberList) {
-    if (!Array.isArray(numberList) || numberList.length <= 0) return 0;
+    if (!Array.isArray(numberList) || numberList.length === 0) return 0;
 
     numberList.sort((a, b) => a - b);
     return numberList[numberList.length - 1];
@@ -92,7 +92,7 @@ function largestNumber(numberList) {
 console.log(largestNumber([2, 45, 3, 67, 34, 567, 34, 345, 123]));
 
 const largestNumber2 = (numberList) => {
-    if (!Array.isArray(numberList) || numberList.length <= 0) return 0;
+    if (!Array.isArray(numberList) || numberList.length === 0) return 0;
 
     let max = 0;
     for (let i = 0; i < numberList.length; i++) {
@@ -106,7 +106,7 @@ console.log(largestNumber2([2, 45, 3, 67, 34, 567, 34, 345, 123]));
 // 9. Write a function to find duplicate values in a given array: input [4,2,34,4,1,12,1,4] -> results: [4, 1]. Bài này tìm hiểu phương thức lastIndexOf của mảng nhé
 
 const duplicateValueInArray = (arrayList) => {
-    if (!Array.isArray(arrayList) || arrayList.length <= 0) return [];
+    if (!Array.isArray(arrayList) || arrayList.length === 0) return [];
     const duplicates = arrayList.filter(
         (item, index, arr) => arr.lastIndexOf(item) !== index
     );
