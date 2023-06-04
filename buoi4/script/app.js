@@ -110,7 +110,13 @@ const duplicateValueInArray = (arrayList) => {
     const duplicates = arrayList.filter(
         (item, index, arr) => arr.lastIndexOf(item) !== index
     );
-    return [...new Set(duplicates)];
+
+    const newArray = [];
+    for (let i = 0; i < duplicates.length; i++) {
+        if (!newArray.includes(duplicates[i])) newArray.push(duplicates[i]);
+    }
+
+    return newArray;
 };
 console.log(duplicateValueInArray([4, 2, 34, 4, 1, 12, 1, 4]));
 
