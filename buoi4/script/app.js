@@ -114,6 +114,23 @@ const duplicateValueInArray = (arrayList) => {
 };
 console.log(duplicateValueInArray([4, 2, 34, 4, 1, 12, 1, 4]));
 
+const duplicateValueInArray2 = (arrayList) => {
+    if (!Array.isArray(arrayList) || arrayList.length === 0) return [];
+
+    const arrayList2 = [...arrayList.sort()];
+    const newArray = [];
+
+    for (let i = 0; i < arrayList2.length; i++) {
+        if (arrayList2[i] === arrayList2[i + 1]) {
+            newArray.push(arrayList2[i]);
+        }
+    }
+
+    return [...new Set(newArray)].reverse();
+};
+
+console.log(duplicateValueInArray2([4, 2, 34, 4, 1, 12, 1, 4]));
+
 // ## Advanced
 
 // 1. Viết một function có chức năng tương tự phương thức `map` của mảng
