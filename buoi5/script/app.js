@@ -28,9 +28,7 @@ const without = (objectList, char) => {
     )
         return {};
 
-    for (const key in objectList) {
-        if (key === char) delete objectList[key];
-    }
+    delete objectList[char];
     return objectList;
 };
 
