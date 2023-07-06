@@ -18,12 +18,12 @@ window.addEventListener("load", function () {
     }
 
     function removeTodo() {
-        const value = this.dataset.todo;
-        const index = todoItems.indexOf(value);
-        todoItems.splice(index, 1);
+        const newTodoItems = todoItems.filter(
+            (todo) => todo.id !== Number.parseInt(this.dataset.id)
+        );
         const item = this.parentNode;
         item.parentNode.removeChild(item);
-        localStorage.setItem(storageName, JSON.stringify(todoItems));
+        localStorage.setItem("todoItems", JSON.stringify(newTodoItems));
     }
 
     function renderTodo(todo) {
@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
                     ${todo.name}
                 </div>
             </div>
-            <button class="todoRemove" data-todo="${todo.name}">
+            <button class="todoRemove" data-id="${todo.id}">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
 
     function addTodo(todo, completed) {
         const objTodo = {
-            id: todoItems.length + 1,
+            id: Math.floor(Math.random() * 10000000),
             name: todo,
             completed,
         };
