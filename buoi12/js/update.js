@@ -21,11 +21,7 @@ async function handleUpdatePost(event) {
             image: image || post.image,
             description: description || post.description,
         });
-        Toastify({
-            text: "Updated post successfully!",
-            duration: 3000,
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-        }).showToast();
+        window.location.replace(`dashboard.html`);
     } catch (error) {
         console.log(error);
     }

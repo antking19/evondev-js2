@@ -57,12 +57,27 @@ function buttonDeletePost() {
         });
 }
 
+function editPost(event) {
+    event.preventDefault();
+    const id = this.dataset.id;
+    window.location.replace(`update-post.html?id=${id}`);
+}
+
+function buttonEditPost() {
+    const btnEditList = document.querySelectorAll(".btnEdit");
+    btnEditList &&
+        btnEditList.forEach((btnEdit) => {
+            btnEdit.addEventListener("click", editPost);
+        });
+}
+
 async function displayTablePostList() {
     const posts = await getPosts();
     posts.forEach((item, index) => {
         displayTablePost(item, index);
     });
     buttonDeletePost();
+    buttonEditPost();
 }
 
 window.addEventListener("load", displayTablePostList);
