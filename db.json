@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": "9051016a4582655z",
+      "title": "Responsive giao diện cực đỉnh với Container Queries",
+      "slug": "responsive-giao-dien-cuc-dinh-voi-container-queries",
+      "image": "https://evondev.com/wp-content/uploads/2023/06/text-clamp-800x500.jpg",
+      "description": "Vậy thì còn cách nào khác để làm Responsive cho giao diện mà không hoặc ít dùng tới Media Queries không ? Tất nhiên là có rồi, và mình rất háo hức giới thiệu cho các bạn ngay sau đây Container Queries."
+    },
+    {
+      "id": "5945140a3055685z",
+      "title": "Hành trình gian nan  và may mắn để có thu nhập “cao” của mình như thế nào ?",
+      "slug": "hanh-trinh-gian-nan-va-may-man-de-co-thu-nhap-cao-cua-minh-nhu-the-nao",
+      "image": "https://evondev.com/wp-content/uploads/2023/06/typescript-part-2-800x500.jpg",
+      "description": "Quay lại 12 năm đi học của mình khá bình thường không có gì nổi bật. Mình quyết định theo ngành IT và thi vào đại học SPKT nhưng mình chỉ được 10,5đ cho 3 môn Toán Lý Hóa gộp lại. Năm đó trường lấy 14đ, tất nhiên là mình tạch rồi(Công sức 12 năm đi học, tiền ba mẹ cho ăn học). Anh mình bảo học lại năm sau thi lại, nhưng mình quyết định là học luôn Cao Đẳng. Mình đã chọn trường Cao Đẳng Kỹ Thuật Cao Thắng. Ban đầu là mình thích Photoshop cơ, nhưng ở trường Cao Thắng thì Photoshop chỉ dạy cho trung cấp chứ không phải cho hệ Cao Đẳng Chính Quy."
+    },
+    {
+      "id": "8456629a5874586z",
+      "title": "Những đoạn code tùy biến cho VSCode cực đẹp bởi Evondev",
+      "slug": "nhung-doan-code-tuy-bien-cho-vscode-cuc-dep-boi-evondev",
+      "image": "https://evondev.com/wp-content/uploads/2023/06/typescript-800x500.jpg",
+      "description": "Trước khi mà các bạn có thể áp dụng được những đoạn code này vào thì các bạn cần xem video này trên kênh Youtube của mình để có thể hiểu cách làm nhé."
+    },
+    {
+      "id": "3338022a2800033z1688783295400",
+      "title": "Typescript cơ bản cho người mới phần 1",
+      "slug": "typescript-co-ban-cho-nguoi-moi-phan-1",
+      "image": "https://evondev.com/wp-content/uploads/2023/06/typescript-1200x580.jpg",
+      "description": "Typescript là một ngôn ngữ lập trình mã nguồn mở được phát triển bởi Microsoft. Nó là một phiên bản mở rộng của Javascript, giúp làm cho việc phát triển ứng dụng web và ứng dụng quản lý code Javascript trở nên dễ dàng và hiệu quả hơn."
+    },
+    {
+      "id": "1785796a2052576z1688783335014",
+      "title": "3 cách làm Border Gradient trong CSS mà bạn nên biết",
+      "slug": "3-cach-lam-border-gradient-trong-css-ma-ban-nen-biet",
+      "image": "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "description": "Với cách này thì chúng ta sẽ sử dụng 2 thuộc tính trong CSS đó chính là border-image-slice và border-image-source, cách này nhanh gọn lẹ nhất, tuy nhiên có một nhược điểm đó chính là không dùng được với border-radius(khi làm bo góc)"
+    }
+  ]
+}
